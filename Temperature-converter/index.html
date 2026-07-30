@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Temperature Converter</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="page-wrapper">
+
+    <div class="converter-card">
+
+        <h1>🌡 Smart Temperature Converter</h1>
+
+        <p class="subtitle">
+            Convert temperature values quickly between Celsius,
+            Fahrenheit and Kelvin.
+        </p>
+
+        <div class="field-group">
+
+            <label for="temperatureValue">
+                Temperature
+            </label>
+
+            <input
+                type="number"
+                id="temperatureValue"
+                placeholder="Example : 25">
+
+        </div>
+
+        <div class="field-group">
+
+            <label for="inputUnit">
+                Input Unit
+            </label>
+
+            <select id="inputUnit">
+
+                <option value="celsius">
+                    Celsius (°C)
+                </option>
+
+                <option value="fahrenheit">
+                    Fahrenheit (°F)
+                </option>
+
+                <option value="kelvin">
+                    Kelvin (K)
+                </option>
+
+            </select>
+
+        </div>
+
+        <div class="button-area">
+
+            <button onclick="convertTemperature()">
+
+                Convert Temperature
+
+            </button>
+
+            <button id="resetButton"
+                    onclick="clearValues()">
+
+                Reset
+
+            </button>
+
+        </div>
+
+        <p id="messageBox"></p>
+
+        <div class="output-section">
+
+            <h2>Converted Results</h2>
+
+            <div class="output-item">
+
+                <span>Celsius</span>
+
+                <strong id="showCelsius">
+                    --
+                </strong>
+
+            </div>
+
+            <div class="output-item">
+
+                <span>Fahrenheit</span>
+
+                <strong id="showFahrenheit">
+                    --
+                </strong>
+
+            </div>
+
+            <div class="output-item">
+
+                <span>Kelvin</span>
+
+                <strong id="showKelvin">
+                    --
+                </strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
